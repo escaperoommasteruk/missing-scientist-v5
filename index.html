@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Missing Scientist v5</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game">
+  <h1>The Missing Scientist</h1>
+  <h3 id="timer">Time: 30:00</h3>
+
+  <div id="inventory">
+    <h4>Inventory:</h4>
+    <ul id="inventoryList"></ul>
+  </div>
+
+  <div id="labScene">
+    <img src="images/lab-bg.jpg" id="labBackground" alt="Lab Background">
+
+    <div id="labObjects">
+      <img src="images/cabinet.png" class="labObject" id="cabinet" onclick="clickObject('cabinet')" title="Cabinet">
+      <img src="images/terminal.png" class="labObject" id="terminal" onclick="clickObject('terminal')" title="Terminal">
+      <img src="images/chemical-table.png" class="labObject" id="chemTable" onclick="clickObject('chemTable')" title="Chemical Table">
+      <img src="images/door.png" class="labObject" id="door" onclick="clickObject('door')" title="Lab Door">
+      <img src="images/wires.png" class="labObject" id="wires" onclick="clickObject('wires')" title="Wiring Puzzle">
+      <img src="images/lasers.png" class="labObject" id="lasers" onclick="clickObject('lasers')" title="Laser Maze">
+    </div>
+
+    <div id="interaction"></div>
+
+    <input type="text" id="answer" placeholder="Type answer" style="display:none;">
+    <button onclick="submitAnswer()" id="submitBtn" style="display:none;">Submit</button>
+    <button onclick="showHint()">Hint</button>
+
+    <p id="message"></p>
+  </div>
+</div>
+
+<script src="multiplayer.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
